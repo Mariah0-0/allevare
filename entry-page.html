@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Allevare - Add Entry</title>
+
+    <link rel="stylesheet" href="style2.css" />
+</head>
+
+
+<body>
+
+    <header>
+        <h2 class="logo">
+            <img class="logo-img" src="Images/AllevareLogo.png" alt="Allevare Logo" /><span class="logo-name">Allevare</span>
+        </h2>
+        <div class="head-container">
+            <div class="welcome">Welcome, <span id="nav_username"></span></div>
+            <button class="btnLogout" onclick="window.location.href='logout';">Logout</button>
+        </div>
+    </header>
+
+
+
+    <div class="entry-form">
+        <form action="/addEntry" method="post" onsubmit="return proceed">
+
+            <div class="mood-div">
+
+                <h2>How are you feeling today-?</h2>
+
+                <input type="radio" id="image1" name="mood" value="5" required>
+                <label class="image-radio" for="image1"><img src="Images/Hap.png" alt="Image 1" onclick="displaySleepAle('Awesome')"></label>
+
+                <input type="radio" id="image2" name="mood" value="4" required>
+                <label class="image-radio" for="image2"><img src="Images/Smi.png" alt="Image 2" onclick="displaySleepAle('Good')"></label>
+
+                <input type="radio" id="image3" name="mood" value="3" required>
+                <label class="image-radio" for="image3"><img src="Images/Mid.png" alt="Image 3" onclick="displaySleepAle('Meh')"></label>
+
+                <input type="radio" id="image4" name="mood" value="2" required>
+                <label class="image-radio" for="image4"><img src="Images/Hm.png" alt="Image 4" onclick="displaySleepAle('Bad')"></label>
+
+                <input type="radio" id="image5" name="mood" value="1" required>
+                <label class="image-radio" for="image5"><img src="Images/Angy.png" alt="Image 5" onclick="displaySleepAle('Awful')"></label>
+
+                <div id="SleepAle"></div>
+
+            </div>
+
+            <div class="water-div">
+
+                <h2>How much water did you drink today-?</h2><br /><span>Click on the cup</span><br /><br />
+
+                <div id="waterImageContainer">
+                    <img id="waterImage" src="Images/0.png" alt="Water Image">
+                    <div id="ValueofWater">0 cups</div>
+                    <input type="text" name="water" id="waterInput" value="0">
+                </div>
+
+            </div>
+
+
+            <div class="screen-div">
+
+                <h2>How much Screen-Time did you use today-? <small>(hours)</small></h2>
+                <div class="screen-buttons">
+                    <input type="radio" name="screen" id="screen1" value="1" required>
+                    <label for="screen1"> <span>1</span></label>
+
+                    <input type="radio" name="screen" id="screen2" value="2" required>
+                    <label for="screen2"> <span>2</span></label>
+
+                    <input type="radio" name="screen" id="screen3" value="3" required>
+                    <label for="screen3"> <span>3</span></label>
+
+                    <input type="radio" name="screen" id="screen4" value="4" required>
+                    <label for="screen4"> <span>4</span></label>
+
+                    <input type="radio" name="screen" id="screen5" value="5" required>
+                    <label for="screen5"> <span>5</span></label><br />
+
+
+                    <input type="radio" name="screen" id="screen6" value="6" required>
+                    <label for="screen6"> <span>6</span></label>
+
+                    <input type="radio" name="screen" id="screen7" value="7" required>
+                    <label for="screen7"> <span>7</span></label>
+
+                    <input type="radio" name="screen" id="screen8" value="8" required>
+                    <label for="screen8"> <span>8</span></label>
+
+                    <input type="radio" name="screen" id="screen9" value="9" required>
+                    <label for="screen9"> <span>9</span></label>
+
+                    <input type="radio" name="screen" id="screen10" value="10" required>
+                    <label for="screen10"> <span>10</span></label><br />
+
+
+                    <input type="radio" name="screen" id="screen11" value="11" required>
+                    <label for="screen11"> <span>11</span></label>
+
+                    <input type="radio" name="screen" id="screen12" value="12" required>
+                    <label for="screen12"> <span>12</span></label>
+
+                    <input type="radio" name="screen" id="screen13" value="13" required>
+                    <label for="screen13"> <span>13</span></label>
+
+                    <input type="radio" name="screen" id="screen14" value="14" required>
+                    <label for="screen14"> <span>14</span></label>
+
+                    <input type="radio" name="screen" id="screen15" value="15" required>
+                    <label for="screen15"> <span>15</span></label>
+
+                </div>
+
+            </div>
+
+
+            <div class="stress-div">
+
+                <h2>How stressed were you today-?</h2><br /><br />
+                <input type="range" min="1" max="10" value="1" step="1" name="stress" id="slider">
+                <div>
+                    <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+                </div>
+
+            </div>
+
+            <div class="sleep-div">
+
+                <h2> How much sleep did you get today-?</h2>
+
+                <p id="sleepDropdown"></p>
+
+            </div>
+
+
+            <div class="journal-div">
+
+                <h2> How was your day-? Write it down-!:</h2><br /><br />
+                <textarea name="journal" rows="6" cols="50"></textarea>
+                <img src="Images/Quill.png" width="90" height="90"><br>
+
+            </div>
+
+            <input type="submit" class="Submit-1">
+            <div id="addEntryError"></div>
+
+        </form>
+    </div>
+
+
+    <script src="script3.js"></script>
+
+
+</body>
+
+</html>

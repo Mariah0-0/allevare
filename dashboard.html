@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Allevare - Dashboard</title>
+    <link rel="stylesheet" href="style1.css" />
+</head>
+
+
+<body>
+
+    <header>
+        <h2 class="logo">
+            <img class="logo-img" src="Images/AllevareLogo.png" alt="Allevare Logo" /><span class="logo-name">Allevare</span>
+        </h2>
+        <div class="head-container">
+            <div class="welcome">Welcome, <span id="nav_username"></span></div>
+            <button class="btnLogout" onclick="window.location.href='logout';">Logout</button>
+        </div>
+    </header>
+
+    <!--bottom add button-->
+    <button class="add-bottom-btn" onclick="window.location.href='entry-page.html';">
+        <ion-icon name="add-outline"></ion-icon>
+    </button>
+
+    <div class="container">
+        <div class="main-text">
+            HOW ARE YOU DOING TODAY?
+        </div>
+        <div class="add-btn">
+            <button id="add-button" onclick="window.location.href='entry-page.html';"><span id="add-icon"><ion-icon name="add-outline"></ion-icon></span><span id="add-btn-text">  Add Record</span></button>
+        </div>
+        <!--dashboard start-->
+        <div class="dashb">
+
+            <!--sleep-->
+            <div class="sleep">
+                <div class="sleep-head">
+                    SLEEP
+                </div>
+                <div id="sleep-graph"></div>
+            </div>
+
+            <!--water-->
+            <div class="water">
+                <div class="water-head">WATER</div>
+                <div class="water-main">
+                    <div id="no"></div>
+                    <div class="avg">avg</div>
+                    <span id="water-img"></span>
+                </div>
+            </div>
+
+            <!--screen-->
+            <div class="screen">
+                <div class="screen-head">
+                    SCREEN TIME
+                </div>
+                <div id="screen-graph">
+
+                </div>
+            </div>
+
+            <!--feedb-->
+            <div id="feedb">
+            </div>
+
+            <!--quote-->
+            <div id="quote">
+            </div>
+
+            <!--mood-->
+            <div class="mood">
+                <div class="mood-head">
+                    MOOD
+                </div>
+                <div id="mood-graph"></div>
+            </div>
+
+            <!--journal-->
+            <div class="journal">
+
+                <!--will retrieve these from mysql in the second deliverable-->
+
+                <div class="j">
+                    <div class="j-header" id="jh1">
+                        June 4
+                    </div>
+                    <div class="j-main" id="jm1"></div>
+                </div>
+                <div class="j">
+                    <div class="j-header" id="jh2">
+                        June 5
+                    </div>
+                    <div class="j-main" id="jm2"></div>
+                </div>
+                <div class="j">
+                    <div class="j-header" id="jh3">
+                        June 7
+                    </div>
+                    <div class="j-main" id="jm3"></div>
+                </div>
+            </div>
+        </div>
+        <!--dashboard end-->
+    </div>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.40.0/apexcharts.min.js"></script>
+    <script src="script2.js"></script>
+
+</body>
+</html>

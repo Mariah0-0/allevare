@@ -1,0 +1,69 @@
+{
+  "SleepList": [
+    {
+      "id": 1,
+      "range": "1-2"
+    },
+    {
+      "id": 2,
+      "range": "2-3"
+    },
+    {
+      "id": 3,
+      "range": "3-4"
+    },
+    {
+      "id": 4,
+      "range": "4-5"
+    },
+
+    {
+      "id": 5,
+      "range": "5-6"
+    },
+    {
+      "id": 6,
+      "range": "6-7"
+    }
+    ,
+    {
+      "id": 7,
+      "range": "7-8"
+    }
+    ,
+    {
+      "id": 8,
+      "range": "8-9"
+    }
+
+    ,
+    {
+      "id": 9,
+      "range": "9-10"
+    }
+    ,
+    {
+      "id": 10,
+      "range": "More than 10"
+    }
+  ],
+  "QuotesList": [
+    "You don't have to control your thoughts. You Just have to stop letting them control you.<br><br>- Dan Millman",
+    "Happiness can be found even in the darkest times, if one only remembers to turn on the light.<br><br>- Albus Dumbeldore",
+    "Vulnerability sounds like truth and feels like courage. Truth and Courage aren't always comfortable but they are never weaknesses.<br><br>- Brene Brown",
+    "There is always hope even when your brain tells you there isn't.<br><br>-John Green",
+    "Nothing can dim the light that shines from within.<br><br>-Maya Angelou",
+    "Feelings come and go like clouds in the a windy sky. Concious breathing is my anchor.<br><br>- Thich Nhat Hanh"
+  ],
+  "FeedbackList": {
+    "sleep": "Having enough rest is vital and ensures better physical and mental well-being.",
+    "water": "It is advisable to increase water intake, and it is beneficial for physical well-being.",
+    "screen": "Allowing yourself respite from electronic devices aids in cultivating a healthier balance. It is advisable for you to take a periodic break.",
+    "stress": [
+      "Please remember it is important to take care of yourself by enjoying a long walk or treating yourself to a snack. Self-care and recharging one's batteries are very important.",
+      "When under pressure, it's crucial to work smarter than harder. Finding out the optimal time for starting a task and stopping it can be challenging.",
+      "Please remember to engage with close friends and families during periods of stress. It can aid in bringing peace to one's mind.",
+      "Listening to music that one can relate to can release and alleviate tension."
+    ]
+  }
+}
