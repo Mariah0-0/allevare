@@ -1,0 +1,820 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tsukimi+Rounded:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Srisakdi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background: rgb(255,0,0);
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(0,22,255,1) 100%);
+}
+
+/* SCROLLBAR*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #0015ff;
+}
+
+::-webkit-scrollbar-track-piece {
+    background: #0015ff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #2c0078;
+    border-radius: 10px;
+}
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #180140;
+    }
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    transition: transform 0.5s;
+}
+
+header.hidden{
+    transform:translateY(-100%);
+}
+
+.head-container {
+    position:relative;
+    right:-20px;
+    display:flex;
+}
+
+
+.welcome {
+    margin:auto;
+    font-size: 1em;
+    font-family: 'Merienda', cursive;
+    color: #fff;
+}
+
+.welcome span{
+    font-family: 'Merienda', cursive;
+}
+
+.logo {
+    font-size: 2em;
+    user-select: none;
+}
+
+    .logo .logo-name {
+        position:relative;
+        left:20px;
+        font-family: 'Charm', cursive;
+        font-weight:400;
+        color:#000;
+    }
+
+.logo .logo-img{
+    position:absolute;
+    top:2px;
+    left:20px;
+    width:90px;
+    height:90px;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    color: #fff;
+}
+    .navigation a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 100%;
+        height: 3px;
+        background: #fff;
+        border-radius: 5px;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform .5s;
+    }
+
+    .navigation a:hover::after {
+        transform-origin: left;
+        transform: scaleX(1);
+    }
+
+.navigation .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+    .navigation .btnLogin-popup:hover {
+        background: #fff;
+        color: #000;
+    }
+
+.btnLogout {
+    width: 120px;
+    height: 45px;
+    background: transparent;
+    border: 1px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+    .btnLogout:hover {
+        background: #fff;
+        color: #000;
+    }
+
+.navigation .btnLogin-popup:hover {
+    background: #fff;
+    color: #162938;
+}
+
+.btn-getstarted {
+    position: fixed;
+    top: 55%;
+    right: 28%;
+    width: 250px;
+    height: 80px;
+    border: none;
+    border-radius: 40px;
+    background-color: #1E0014;
+    color: #fff;
+    font-size: 1.3em;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: 0 0 30px rgba(0,0,0,.2);
+    transition: .2s;
+    transform: translateX(-1300px);
+    transition: .5s;
+}
+
+    .btn-getstarted.btn-appear {
+        transform: translateX(0);
+        transition: .5s;
+    }
+
+    .btn-getstarted:hover {
+        background-color: #FFE0FD;
+        color: #000;
+        box-shadow: 0 0 30px rgb(255, 255, 255, 0.20);
+    }
+
+#desc {
+    position: fixed;
+    top: 55%;
+    right: 28%;
+    width: 260px;
+    height: 160px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(255,255,255,.2);
+    padding: 20px 25px 25px 25px;
+    font-size: .8em;
+    color: #000;
+    font-family: 'Merienda', cursive;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform:translateX(0);
+    transition: .5s;
+}
+    #desc small {
+        font-family: 'Merienda', cursive;
+        font-size: 9px;
+        margin-top: 5px;
+        transition: .5s;
+    }
+
+#desc.desc-hide{
+    transform:translateX(700px);
+}
+
+.bg-img{
+    position:fixed;
+    width:117%;
+    height:170%;
+    bottom:-190px;
+}
+
+.bg-img img{
+    width:100%;
+    height:100%;
+}
+
+#temp{
+    position:absolute;
+    bottom:0;
+    left:0;
+    transform:translateY(5px);
+}
+
+/*-------------------------------LOGIN PAGE--------------------------------*/
+
+.wrapper {
+    position: relative;
+    top:80px;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform .5s ease, height .2s ease, margin-top .2s ease;
+}
+
+    .wrapper.active {
+        height: 500px;
+    }
+
+    .wrapper .form-box {
+        width: 100%;
+        padding: 40px;
+    }
+
+        .wrapper .form-box.login {
+            transition: transform .18s ease;
+            transform: translateX(0);
+        }
+
+    .wrapper.active .form-box.login {
+        transition: none;
+        transform: translateX(-400px);
+    }
+
+    .wrapper .form-box.register {
+        position: absolute;
+        transition: none;
+        transform: translateX(400px);
+    }
+
+    .wrapper.active .form-box.register {
+        transition: transform .18s ease;
+        transform: translateX(0);
+    }
+
+    .wrapper .icon-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 45px;
+        height: 45px;
+        background: #000;
+        font-size: 2em;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border-bottom-left-radius: 20px;
+        z-index: 1;
+    }
+
+.form-box h2 {
+    font-size: 2em;
+    color: #000;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #000;
+    margin: 30px 0;
+}
+
+    .input-box label {
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        transform: translateY(-50%);
+        font-size: 1em;
+        color: #000;
+        font-weight: 500;
+        pointer-events: none;
+        transition: .5s;
+    }
+
+    .input-box input:focus ~ label, .input-box input:valid ~ label {
+        top: -5px;
+    }
+
+    .input-box input {
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 1em;
+        color: #000;
+        font-weight: 600;
+        padding: 0 35px 0 5px;
+    }
+
+    .input-box .icon {
+        position: absolute;
+        right: 8px;
+        font-size: 1.2em;
+        color: #000;
+        line-height: 57px;
+    }
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #000;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+}
+
+.login-register {
+    font-size: .9em;
+    color: #000;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+    .login-register p a {
+        color: #000;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+        .login-register p a:hover {
+            text-decoration: underline;
+        }
+
+
+
+
+/*---------------------------FORM VALIDATION-------------------------*/
+
+
+
+#email-error {
+    position: absolute;
+    top: 100%;
+    left: 2px;
+    font-size: 16px;
+    font-weight: 400;
+    color: red;
+    transition: top 0.5s;
+}
+
+#email-error2 {
+    position: absolute;
+    top: 100%;
+    left: 2px;
+    font-size: 10px;
+    font-weight: 400;
+    color: red;
+    transition: top 0.5s;
+}
+
+/*password confirmation*/
+
+.valid {
+    color: green;
+}
+
+    .valid:before {
+        position: relative;
+        left: -35px;
+        content: "&#10004;";
+    }
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+    color: red;
+}
+
+    .invalid:before {
+        position: relative;
+        left: -35px;
+        content: "&#10006;";
+    }
+
+#message {
+    display: none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+    font-size: smaller;
+}
+
+    #message p {
+        padding: 10px 35px;
+        font-size: 18px;
+    }
+
+/*optional password confirmation*/
+
+.input-box input.invalid {
+    border-color: red;
+}
+
+.input-box span#password-error {
+    color: red;
+    font-size: 14px;
+}
+
+
+#psw-error2 {
+    position: absolute;
+    top: 100%;
+    left: 2px;
+    font-size: 10px;
+    font-weight: 400;
+    color: red;
+    transition: top 0.5s;
+}
+
+#username-error {
+    position: absolute;
+    top: 100%;
+    left: 2px;
+    font-size: 16px;
+    font-weight: 400;
+    color: red;
+    transition: top 0.5s;
+}
+
+.input-box input.invalid {
+    border-color: red;
+}
+
+.input-box span#username-error {
+    color: red;
+    font-size: 10px;
+}
+
+/*---------------------------------------------*/
+
+#l_error_message {
+    width: 100%;
+    text-align: center;
+    margin-bottom: -5px;
+    font-size: 0.7em;
+    color: red;
+}
+
+#r_error_message {
+    width: 100%;
+    text-align: center;
+    margin-bottom: -5px;
+    font-size: 0.7em;
+    color: red;
+}
+
+
+
+/*-------------DASHBOARD-------------------*/
+.container {
+    position: absolute;
+    width: 60%;
+    top: 243px;
+}
+
+.main-text {
+    position: relative;
+    text-align: center;
+    font-size: 3em;
+    color: #fff;
+    font-family: 'Cormorant Garamond', serif;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.84);
+}
+
+.add-btn {
+    display:flex;
+    justify-content:center;
+    margin-top:40px;
+}
+
+    .add-btn #add-button {
+        height: 60px;
+        width: 230px;
+        border: none;
+        border-radius: 40px;
+        background-color: #1a1a1a;
+        color: #fff;
+        cursor: pointer;
+        transition: .2s;
+    }
+
+        .add-btn #add-button:hover {
+            background-color: #be99ff;
+            color: #000;
+            box-shadow: 0 0 30px rgba(255,255,255,.2);
+        }
+
+    .add-btn #add-button #add-btn-text {
+        position:relative;
+        bottom:3px;
+        font-size: 1.3em;
+    }
+
+    .add-btn #add-button #add-icon{
+        position:relative;
+        bottom:-3px;
+        font-size:1.8em;
+    }
+
+.add-bottom-btn {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: #be0000;
+    height: 55px;
+    width: 55px;
+    margin: 0 30px 20px 0;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.5);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2em;
+    font-weight: 700;
+    transform: translateY(150px);
+    transition: .5s;
+}
+
+    .add-bottom-btn ion-icon {
+        --ionicon-stroke-width: 38px;
+    }
+
+    .add-bottom-btn:hover {
+        background-color: #ff6969;
+    }
+
+    .add-bottom-btn.Bshow {
+        transform: translateY(0);
+        transition: .5s;
+    }
+
+.dashb {
+    position:relative;
+    width:100%;
+    margin-top:170px;
+
+    display:grid;
+    grid-template-columns:1.2fr 1fr 1fr;
+    grid-template-rows:2fr 1.2fr 1.5fr 2fr 2.5fr;
+    grid-template-areas:
+        "sleep sleep water"
+        "screen feedb feedb"
+        "screen quote quote"
+        "screen mood mood"
+        "journal journal journal";
+    height:190vh;
+    gap:20px;
+    margin-bottom:150px;
+
+}
+
+    .dashb > div {
+        display: flex;
+        border-radius: 10px;
+        background: rgb(36,0,99);
+        background: linear-gradient(90deg, rgba(36,0,99,1) 0%, rgba(43,0,117,1) 30%, rgba(43,0,117,1) 70%, rgba(36,0,99,1) 100%);
+        box-shadow: 2px 2px 5px rgba(0,0,0,.5);
+    }
+
+.sleep {
+    grid-area: sleep;
+    align-items:center;
+}
+
+    .sleep .sleep-head {
+        font-family: 'Righteous', cursive;
+        transform: rotate(-90deg);
+        color:#fff;
+        font-size: 3em;
+        margin:-15px;
+        letter-spacing:1.5px;
+    }
+
+    .sleep #sleep-graph {
+        max-width: 650px;
+        margin: 30px 0 0 0;
+    }
+
+.water {
+    width:100%;
+    height:100%;
+    grid-area: water;
+    flex-direction: column;
+    padding: 25px 8px 25px 18px;
+    justify-content:space-between;
+}
+
+    .water .water-head {
+        font-family: 'Righteous', cursive;
+        text-align: center;
+        color: #fff;
+        font-size: 3em;
+        letter-spacing: 1.5px;
+    }
+
+    .water .water-main {
+        display: flex;
+        align-items:end;
+    }
+
+        .water .water-main #no {
+            font-family: 'Righteous', cursive;
+            color: #fff;
+            font-size: 8em;
+            letter-spacing: 1.5px;
+            margin-bottom:-15px;
+        }
+
+        .water .water-main .avg {
+            font-family: 'Righteous', cursive;
+            color: #fff;
+            font-size: 0.9em;
+            letter-spacing: 1.5px;
+            margin-bottom:15px;
+
+        }
+
+        .water .water-main #water-img img{
+            height:135px;
+            width:125px;
+            margin:0 -15px -5px 0;
+        }
+
+.screen {
+    grid-area: screen;
+    justify-content: center;
+    padding: 15px;
+    flex-direction: column;
+}
+
+    .screen .screen-head {
+        font-family: 'Righteous', cursive;
+        text-align:center;
+        color: #fff;
+        font-size: 2.5em;
+        letter-spacing: 1.5px;
+    }
+
+    .screen #screen-graph{
+        width:100%;
+        padding:30px 15px 0 0;
+    }
+
+#feedb {
+    grid-area: feedb;
+    color: #ffe3ff;
+    padding: 25px 25px 25px 25px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+#quote {
+    grid-area: quote;
+    color: #fff;
+    padding: 25px 25px 25px 25px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Srisakdi', cursive;
+    font-size: 1.1em;
+}
+
+.mood {
+    grid-area: mood;
+    align-items: center;
+}
+
+    .mood .mood-head {
+        font-family: 'Righteous', cursive;
+        transform: rotate(-90deg);
+        color: #fff;
+        font-size: 3em;
+        margin: -15px;
+        letter-spacing: 1.5px;
+    }
+
+    .mood #mood-graph {
+        max-width: 650px;
+        margin: 30px 15px 0 -30px;
+        width:100%;
+    }
+
+.journal {
+    grid-area: journal;
+    display:flex;
+    justify-content:space-around;
+    padding:0 10px 0 10px;
+}
+
+    .journal > div {
+        width: 100%;
+        margin: 30px 20px 30px 20px;
+        border-radius: 20px;
+        background-color:#ffe5d1;
+        overflow: hidden;
+    }
+
+    .journal .j .j-header {
+        height: 40px;
+        background-color: #ffb175;
+        text-align: center;
+        line-height: 40px;
+        font-weight: 600;
+        color: #692e01;
+    }
+
+    .journal .j .j-main {
+        padding: 13px 17px 17px 17px;
+        font-size: 1em;
+        font-family: 'Caveat', cursive;
+    }
+
+
+    /*css for toggle password icon*/
+
+    .toggle-password {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+    
+    .toggle-password ion-icon {
+        font-size: 1.2rem;
+    }
+
+input[type="password"] {
+    padding-right: 30px;
+}
+    
